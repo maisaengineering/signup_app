@@ -12,7 +12,7 @@ class SignupController < ApplicationController
 
      respond_to do |format|
       if @signup.save
-        format.html { redirect_to root_url  }
+        format.html { redirect_to root_url, notice: 'successfully created'  }
         format.json { render json: @signup, status: :created, location: @signup }
       else
         format.html { render action: "new" }
