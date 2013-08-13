@@ -1,5 +1,4 @@
 class SignupController < ApplicationController
-
   def new
     @signup = Signup.new
     respond_to do |format|
@@ -23,8 +22,9 @@ class SignupController < ApplicationController
         @status = "Failed"
         @message ="Something went wrong!"
       end
-
-      format.json {render :partial => "signup/create.json.erb"}
+      format.json do
+        render :partial => 'signup/create',:formats=>[:json]
+      end
     end
   end
 end
