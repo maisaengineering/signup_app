@@ -13,7 +13,11 @@ class SignupController < ApplicationController
       if @signup.save
         @message ="Successfully Created"
       else
-        @message =@signup.errors.messages
+        @message = ""
+        @signup.errors.messages.each do |k,v|
+          @message +=  v.flatten.first.to_s + " "
+
+        end
       end
 
       format.json do
