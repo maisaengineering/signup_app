@@ -10,20 +10,15 @@ class SignupController < ApplicationController
   def create
     @signup = Signup.new(email: params["email"], zipcode: params["zipcode"])
     respond_to do |format|
-      begin
-        if @signup.save
-          @status = "Success"
-          @message ="successfully created"
-        else
-          @status = "Failed"
-          @message ="Already exists"
-        end
-      rescue Exception => e
-        @status = "Failed"
-        @message ="Something went wrong!"
+      if @signup.save
+        @message ="Successfully Created"
+      else
+        @message =@signup.errors.messages
       end
+
       format.json do
-        render :partial => 'signup/create',:formats=>[:json]
+        render :partial => 'signup/create',formats: [:js]
+        #render :text=> "hello"
       end
     end
   end
