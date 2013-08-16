@@ -1,0 +1,142 @@
+<div class="bg-test hidden-phone">
+  <div class="splash-container1 hidden-phone">
+    <div class="hidden-phone logo"><%= image_tag("/assets/weekender-logo.png/") %></div>
+    <div class="tag-line">Book weekend trips <em>from $300</em>. Return just in time for work on Monday.</br>
+      <span class="coming-soon" style="margin-top:40px;"> Coming to an inbox near you.</span></div>
+
+  </div></div>
+
+  <div class="more-info hidden-phone">
+    <%= form_for(@signup, :url => {:action => "create"},:method=>:get,:format=>:html ) do |f| %>
+      <% if flash[:notice] %>
+                <p><%= flash[:notice] %></p>
+
+          <% end %>
+      <%= f.text_field :email, :placeholder => "What's your email Address?", :class =>"input-splash" %></br>
+      <%= f.text_field :zipcode, :placeholder => "Zip Code", :class => "input-splash-2" %></br>
+      <%= f.button "Get notified",:class => "get-notified" %><br>
+    <% end %>
+      <div class="learn">More information</div>
+    <!-- <div style="clear:both;"></div> -->
+<div class="bottom hidden-phone">
+  <div class="row triple">
+    <div class="span3"></div>
+        <div class="span3">
+      <h2>Weekending</h2>
+      <p>Friday afternoon to Sunday afternoon. Weekender is designed to provide you with the ability to explore the world in your spare time without missing a beat in your day-to-day life.
+      </p>
+    </div>
+    <div class="span3">
+      <h2>Direct flights</h2>
+      <p>Be in a different city within 4-5 hours without any layovers. Tel Aviv to Barcelona, Los Angeles to Cabo. Get away efficiently.</p>
+    </div>
+
+    <div class="span3">
+      <h2>Under $600</h2>
+        <p>Let's face it, if you're only going away for the weekend; you don't want to lose your wallet entirely. By curating flights for as low as $250, we can help you explore without losing your apartment.</p>
+    </div>
+    <div class="span3"></div>
+  </div>
+</div>
+
+</div>
+</div><!-- bgtext -->
+
+  <div class="visible-phone yes row">
+      <div class="splash-container1 span12">
+        <div class="visible-phone logo"><%=image_tag "weekender-logo-white.png" %></div>
+    <div class="tag-line">Book weekend trips <em>from $300</em>.</br>
+      <span>Return just in time for work on Monday.</span></div>
+
+            <input type="text" placeholder="What's your email Address?" class="input-splash"></br><input type="text" placeholder="Zip Code" class="input-splash-2"></br><button class="get-notified">Get notified</button><br>
+  <div class="row triple">
+  </br>
+  </br>
+  </br>
+  </br>
+        <div class="span3">
+      <h2>Weekending</h2>
+      <p>Friday afternoon to Sunday afternoon. This site is designed to provide you with the ability to explore the world in your spare time without missing a beat in your day-to-day life.
+      </p>
+    </div>
+    <div class="span3">
+      <h2>Direct flights</h2>
+      <p>Be in a different city within 4-5 hours without any layovers. Tel Aviv to Barcelona, Los Angeles to Cabo. Get away efficiently.</p>
+    </div>
+
+    <div class="span3">
+      <h2>Under $600</h2>
+        <p>Let's face it, if you're only going away for the weekend; you don't want to lose your wallet entirely. By curating flights only under $600, we can help you explore without losing your apartment.</p>
+    </div>
+    <div class="span3"></div>
+  </div>
+</div>
+      </div>
+
+</div>
+      <div class="hidden-phone footer">Built on the weekends, for the weekends, by weekenders just like you.</br>Copyright 2013. An <a href="http://www.twitter.com/asherhunt">Asher Hunt</a> experiment.</div>
+
+  </div>
+
+  <div class="destination hidden-phone">
+    <h1>Ibiza, Spain</h1>
+    <p>Cala Conte beach</p>
+  </div>
+
+<script type="text/javascript">
+  (function() {
+    var config = {
+      kitId: 'peb7wwn',
+      scriptTimeout: 3000
+    };
+    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+  })();
+</script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+  $(function() {
+    $('.tag-line').addClass('animated fadeInUp');
+    $('.join').addClass('animated fadeInLeft');
+    $('.learn').addClass('animated fadeInUp');
+    $('.logo').addClass('animated bounceInDown');
+    $('.triple').addClass('animated fadeInUp');
+    $('.more-info').addClass('animated fadeIn');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
